@@ -25,4 +25,5 @@ while(rodada <= total_de_tentativas):
            print("Seu chute foi menor que o número secreto!")
     rodada = rodada + 1
 
-print("Fim de Jogo!!")
+print("Fim de Jogo!!!")
+
