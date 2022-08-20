@@ -47,5 +47,5 @@ def jogar():
 
     print("Fim de Jogo!!!")
     print("O número secreto foi {}!! Tente novamente.".format(numero_secreto))
-    
+
 
