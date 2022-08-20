@@ -1,13 +1,21 @@
-from turtle import clear
-
+from random import random, randrange
 
 print("***********************************")
 print("Bem vindo ao jogo de adivinhação")
 print("***********************************")
-
-numero_secreto = 33
+numero_secreto = randrange(1, 101)
 total_de_tentativas = 3
 
+print("Qual nível gostaria de jogar?")
+print("(1) Fácil (2) Médio (3) Difícil")
+nivel = int(input("Digite o nível!"))
+
+if(nivel == 1):
+    total_de_tentativas = 20
+elif(nivel == 2):
+    total_de_tentativas = 10
+else:
+    total_de_tentativas = 3
 for rodada in range (1, total_de_tentativas + 1):
     print("Tentativa {} de {}".format(rodada, total_de_tentativas))
     chute = input("Digite um número entre 1 e 100")
@@ -16,7 +24,7 @@ for rodada in range (1, total_de_tentativas + 1):
     if(int(chute) < 1 or int(chute) > 100):
         print("Você deve digitar um número entre 1 e 100")
         continue
-
+        
     acertou = numero_secreto == int(chute)
     chute_foi_maior = int(chute) > numero_secreto
     chute_foi_menor = int(chute) < numero_secreto
