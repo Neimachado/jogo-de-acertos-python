@@ -173,7 +173,3 @@ if(__name__ == "__main__"):
     jogar()
 
 
-def imprime_mensagem_vencedor():
-    print("Você ganhou!")
-
-
