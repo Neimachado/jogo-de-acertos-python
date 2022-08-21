@@ -3,7 +3,8 @@ from operator import truediv
 import random
 import menu
 
-
+def imprime_mensagem_perdedor():
+    print("Você perdeu!")
 def jogar():
     imprime_mensagem_abertura()
     palavra_secreta = carrega_palavra_secreta()
@@ -37,9 +38,9 @@ def jogar():
             menu.escolhe_jogo()
         else:
             menu.escolhe_jogo()
+            
     else:
         imprime_mensagem_perdedor(palavra_secreta)
-
         voltar_ao_menu = input("Digite uma tecla para voltar ao menu!")
         if voltar_ao_menu == 1:
             menu.escolhe_jogo()
@@ -175,5 +176,4 @@ if(__name__ == "__main__"):
 def imprime_mensagem_vencedor():
     print("Você ganhou!")
 
-def imprime_mensagem_perdedor():
-    print("Você perdeu!")
+
