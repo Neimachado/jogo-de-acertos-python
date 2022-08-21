@@ -1,6 +1,7 @@
 
 from operator import truediv
 import random
+import menu
 
 
 def jogar():
@@ -31,9 +32,20 @@ def jogar():
 
     if(acertou):
         imprime_mensagem_vencedor()
+        voltar_ao_menu = input("Digite uma tecla para voltar ao menu!")
+        if voltar_ao_menu == 1:
+            menu.escolhe_jogo()
+        else:
+            menu.escolhe_jogo()
     else:
         imprime_mensagem_perdedor(palavra_secreta)
 
+        voltar_ao_menu = input("Digite uma tecla para voltar ao menu!")
+        if voltar_ao_menu == 1:
+            menu.escolhe_jogo()
+        else:
+            menu.escolhe_jogo()
+        
 
 def desenha_forca(erros):
     print("  _______     ")

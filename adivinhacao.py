@@ -1,4 +1,5 @@
 from random import random, randrange
+import menu
 
 
 def jogar():
@@ -17,14 +18,17 @@ def jogar():
         total_de_tentativas = 20
     elif(nivel == 2):
         total_de_tentativas = 10
-    else:
+    elif(nivel == 3):
         total_de_tentativas = 3
+    else:
+        print("Entrada inválida, digite outra opção.")
+        jogar()
     for rodada in range (1, total_de_tentativas + 1):
         print("Tentativa {} de {}".format(rodada, total_de_tentativas))
         chute = input("Digite um número entre 1 e 100 \n")
         print("Você digitou", chute)
-
-        if(int(chute) < 1 or int(chute) > 100):
+   
+        if int(chute) < 1 or int(chute) > 100:
             print("Você deve digitar um número entre 1 e 100")
             continue
 
@@ -46,7 +50,13 @@ def jogar():
 
 
     print("Fim de Jogo!!!")
-    print("O número secreto foi {}!! Tente novamente.".format(numero_secreto))
+    print("O número secreto foi {}.".format(numero_secreto))
+    voltar_ao_menu = int(input("Digite 1 para voltar ao menu."))
+    voltar_ao_menu = input("Digite uma tecla para voltar ao menu!")
+    if voltar_ao_menu == 1:
+        menu.escolhe_jogo()
+    else:
+        menu.escolhe_jogo()
 
 if(__name__ == "__main__"):
     jogar()
